@@ -1,0 +1,189 @@
+/* Basic Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333333;
+    overflow-x: hidden;
+}
+header {
+    background-color: #004d40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+header.scrolled {
+    background-color: #00251a;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+nav ul li a:hover {
+    color: #b2dfdb;
+    transform: scale(1.1);
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 60px;
+}
+h1, h2, h3 {
+    color: #2eb58c;
+    position: relative;
+    display: inline-block;
+}
+h1::after, h2::after, h3::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #004d40;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+h1:hover::after, h2:hover::after, h3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Profile Styles */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.profile h2 {
+    text-align: left;
+    color: #2eb58c;
+}
+.profile img {
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    align-items: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile img:hover {
+    transform: scale(1.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.profile-content {
+    max-width: 600px;
+}
+
+
+/* Skills, Projects & Certifications Styles */
+.skills, .projects, .certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.skill, .project, .certification {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.skill:hover, .project:hover, .certification:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+}
+.skill::before, .project::before, .certification::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 70%);
+    transition: top 0.3s ease, left 0.3s ease;
+}
+.skill:hover::before, .project:hover::before, .certification:hover::before {
+    top: -30%;
+    left: -30%;
+}
+
+/* Contact Form Styles */
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact form input:focus, .contact form textarea:focus {
+    border-color: #004d40;
+    box-shadow: 0 0 8px rgba(0, 77, 64, 0.5);
+    outline: none;
+}
+.contact form button {
+    padding: 12px 25px;
+    background-color: #004d40;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contact form button:hover {
+    background-color: #00251a;
+    transform: scale(1.05);
+}
+.hidden {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #004d40;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>V.S.R. Harshvardhan Molleti</h1>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="profile" class="profile">
+            <h2>Profile</h2>
+            <img src="profile.jpg" alt="Profile Picture">
+            <p>Hello! I’m V.S.R. Harshvardhan Molleti, a dedicated BCA fresher with a strong foundation in Artificial Intelligence and Web Technologies. Currently pursuing a Bachelor of Computer Applications, I am eager to transition my theoretical knowledge into practical experience within the field of computer science.<br><br>
+
+            My specialization in Artificial Intelligence involves a deep understanding of machine learning, natural language processing, and computer vision. I have hands-on experience with frameworks like TensorFlow and scikit-learn, and I am adept at developing models that drive intelligent insights and automate complex tasks.<br><br>
+                
+            In the realm of Web Technologies, I possess skills in HTML, CSS, JavaScript, and modern frameworks such as React and Angular. I am proficient in building responsive, user-centric websites and web applications, ensuring a seamless and engaging user experience.<br><br>
+                
+            I am passionate about leveraging my technical skills to contribute to innovative projects and dynamic teams. My goal is to enhance my expertise, adapt to emerging technologies, and add value to an organization by solving real-world problems and improving technological processes. I am committed to continuous learning and professional growth, and I look forward to opportunities that challenge me and allow me to make a meaningful impact.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <h3>Artificial Intelligence</h3>
+                <p>Skilled in developing AI solutions using machine learning, natural language processing, and computer vision. Proficient in frameworks like TensorFlow and scikit-learn to create models for automation and intelligent insights.</p>
+            </div>
+            <div class="skill">
+                <h3>Web Technologies</h3>
+                <p>Proficient in HTML, CSS, JavaScript, and modern frameworks like React and Angular. Experienced in building responsive, user-friendly websites and web applications with a focus on performance and accessibility.
+                </p>
+            </div>
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <p>Experienced in writing clean, efficient code in languages like Python, Java, and C++. Proficient in problem-solving, algorithm design, and software development across various domains.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Chat Application</h3>
+                <p>Created a real-time chat application using Python for both client and server. Utilized socket programming to handle client-server communication, supporting features like user authentication, private and group messaging. The server handles multiple clients simultaneously, ensuring smooth interactions. The client interface, built with Python’s tkinter, provides a user-friendly experience with real-time message updates and chat management.</p>
+            </div>
+            <div class="project">
+                <h3>Bus Ticket Booking System</h3>
+                <p>Created a Bus Ticket Booking System using Java, focusing on user-friendly interface and efficient booking processes. Implemented features like seat selection, fare calculation, and booking confirmation. Utilized object-oriented programming principles to ensure maintainability and scalability. Enhanced user experience through intuitive design and seamless navigation, allowing users to easily book and manage their travel.</p>
+            </div>
+            <div class="project">
+                <h3>Car Price Predictor</h3>
+                <p>Developed a Car Price Predictor using Jupyter Notebook and data from Quikr. Utilized Python libraries like Pandas, NumPy, and Scikit-learn for data preprocessing, exploratory data analysis, and model building. Trained multiple models, including Linear Regression and Random Forest, to accurately predict car prices. Evaluated model performance using metrics such as Mean Absolute Error, gaining valuable insights into key features affecting car prices.</p>
+            </div>
+        </section>
+
+        <section id="certifications" class="certifications">
+            <h2>Certifications</h2>
+            <div class="certification">
+                <h3>Certified Artificial Intelligence Professional</h3>
+                <p>Completed an advanced certification course in Artificial Intelligence, covering machine learning, deep learning, and AI applications. Gained hands-on experience with real-world AI projects and earned certification for excellence in the field.</p>
+            </div>
+            <div class="certification">
+                <h3>Web Development Bootcamp Certification</h3>
+                <p>Obtained certification from a comprehensive web development bootcamp. Acquired skills in front-end and back-end development, mastering frameworks such as React, Node.js, and Express.js, along with deployment practices.</p>
+            </div>
+            <div class="certification">
+                <h3>Java Programming Certificate</h3>
+                <p>Earned a Java Programming Certificate after completing an intensive course focusing on core Java concepts, object-oriented programming, and software development. Demonstrated proficiency in developing robust Java applications.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage" class="hidden">Thank you for your message!</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
